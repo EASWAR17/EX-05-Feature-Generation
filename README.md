@@ -20,8 +20,10 @@ Save the data to the file
 
 
 # CODE
-
-
+```
+Program Developed: Easwar.J
+Register number:212221230024
+```
 
 # Data.csv
 ```
@@ -156,3 +158,54 @@ rf5
 
 
 # OUPUT
+
+# Data.csv:
+
+## Initial dataset:
+![image](https://user-images.githubusercontent.com/94154683/195382314-da5fb872-3a3d-44c3-8ce7-bf67d43cf0b5.png)
+## Encoded dataset:
+![image](https://user-images.githubusercontent.com/94154683/195382454-55bad3fd-9bd4-4757-9b95-2449339e4f48.png)
+## Data scaling using MinMaxScaler:
+![image](https://user-images.githubusercontent.com/94154683/195383188-b5f40ae9-024e-41f5-8d44-91d1bf2b85ec.png)
+## Data scaling using StandardScalar:
+![image](https://user-images.githubusercontent.com/94154683/195383387-c6589430-a167-4c24-8691-11cd678f7e1d.png)
+## Data scaling using MaxAbsScaler:
+![image](https://user-images.githubusercontent.com/94154683/195383566-8d71b77a-1bbc-41e0-98c2-adfac5381e2c.png)
+## Data scaling using RobustScaler:
+![image](https://user-images.githubusercontent.com/94154683/195383775-c51d2824-3daa-4372-ba91-4ce9c5dd0efd.png)
+
+# Encoding.csv:
+
+## Initial dataset:
+![image](https://user-images.githubusercontent.com/94154683/195384264-b69a805d-7e71-4184-ae7d-ba6f17347235.png)
+## Encoded dataset:
+![image](https://user-images.githubusercontent.com/94154683/195384331-19f451cf-6040-4d2c-bd13-d08a672f795d.png)
+## Data scaling using MinMaxScaler:
+![image](https://user-images.githubusercontent.com/94154683/195384504-49708c6f-c212-45dd-99ee-43aff50d4099.png)
+## Data scaling using StandardScalar:
+![image](https://user-images.githubusercontent.com/94154683/195384567-5414cd57-52cc-4c86-95ab-460f1cfcf9d8.png)
+## Data scaling using MaxAbsScaler:
+![image](https://user-images.githubusercontent.com/94154683/195384624-aae7880e-f57f-4193-a9e0-9c7961543448.png)
+## Data scaling using RobustScaler:
+![image](https://user-images.githubusercontent.com/94154683/195384688-9f6a64b3-2640-4b59-ab35-1bc14e7a2b82.png)
+
+# Titanic_dataset.csv:
+
+## Initial dataset:
+![image](https://user-images.githubusercontent.com/94154683/195384954-54e7d199-0ea2-4048-ad19-5eed3b134ef8.png)
+## isnull.sum()
+![image](https://user-images.githubusercontent.com/94154683/195385077-5d978b8f-062a-498f-bf4a-e67f6863f8ca.png)
+## Encoded dataset:
+![image](https://user-images.githubusercontent.com/94154683/195385213-4a57ef5d-67b0-4057-97f6-3d64a56d5a7c.png)
+## Data scaling using MinMaxScaler:
+![image](https://user-images.githubusercontent.com/94154683/195385326-ebb49de1-1e06-45b2-a7c0-bc03e35d01c2.png)
+## Data scaling using StandardScalar:
+![image](https://user-images.githubusercontent.com/94154683/195385448-12310dbc-1ece-4ecb-9f15-f45e14fa737a.png)
+## Data scaling using MaxAbsScaler:
+![image](https://user-images.githubusercontent.com/94154683/195385537-beb28e3e-a11a-446a-bd96-a3aa9463b701.png)
+## Data scaling using RobustScaler:
+![image](https://user-images.githubusercontent.com/94154683/195385597-f8f77764-76c2-497e-b1fe-dd26db2077ed.png)
+
+
+# RESULT:
+Feature Generation process and Feature Scaling process is applied to the given data frames sucessfully.
