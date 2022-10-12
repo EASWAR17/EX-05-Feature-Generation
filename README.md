@@ -64,6 +64,95 @@ sc3=RobustScaler()
 df5=pd.DataFrame(sc3.fit_transform(df1),columns=['id', 'bin_1', 'bin_2', 'City', 'Ord_1','Ord_2','Target'])
 df5
 ```
+# Encoding.csv
+```
+import pandas as pd
+qf=pd.read_csv("encoding.csv")
+qf
+
+from sklearn.preprocessing import LabelEncoder, OrdinalEncoder
+from sklearn.preprocessing import OneHotEncoder
+
+oe=OrdinalEncoder()
+
+qf1=qf.copy()
+
+
+qf1["bin_1"] = oe.fit_transform(qf1[["bin_1"]])
+qf1["nom_0"] = oe.fit_transform(qf1[["nom_0"]])
+qf1["ord_2"] = oe.fit_transform(qf1[["ord_2"]])
+qf1["bin_2"] = oe.fit_transform(qf1[["bin_2"]])
+
+#feature scaling
+from sklearn.preprocessing import MinMaxScaler
+sc=MinMaxScaler()
+qf0=pd.DataFrame(sc.fit_transform(qf1),columns=['id', 'bin_1', 'bin_2', 'nom_0','ord_2'])
+qf0   
+
+from sklearn.preprocessing import StandardScaler
+sc1=StandardScaler()
+qf2=pd.DataFrame(sc1.fit_transform(qf1),columns=['id', 'bin_1', 'bin_2', 'nom_0','ord_2'])
+qf2
+
+from sklearn.preprocessing import MaxAbsScaler
+sc2=MaxAbsScaler()
+qf3=pd.DataFrame(sc2.fit_transform(qf1),columns=['id', 'bin_1', 'bin_2', 'nom_0','ord_2'])
+qf3
+
+from sklearn.preprocessing import RobustScaler
+sc3=RobustScaler()
+qf4=pd.DataFrame(sc3.fit_transform(qf1),columns=['id', 'bin_1', 'bin_2', 'nom_0','ord_2'])
+qf4
+```
+
+# Titanic_dataset.csv
+```
+import pandas as pd
+rf=pd.read_csv("titanic.csv")
+rf
+
+#removing unwanted data
+rf.drop("Name",axis=1,inplace=True)
+rf.drop("Ticket",axis=1,inplace=True)
+rf.drop("Cabin",axis=1,inplace=True)  
+
+rf["Age"]=rf["Age"].fillna(rf["Age"].median())
+rf["Embarked"]=rf["Embarked"].fillna(rf["Embarked"].mode()[0])
+
+rf.isnull().sum()
+
+rf1=rf.copy()
+
+from sklearn.preprocessing import LabelEncoder, OrdinalEncoder
+embark=['S','C','Q']
+oe=OrdinalEncoder()
+
+e1=OrdinalEncoder(categories=[embark])
+rf1['Embarked'] = e1.fit_transform(rf[['Embarked']])
+rf1['Sex'] = oe.fit_transform(rf[['Sex']])
+rf1
+
+#feature scaling
+from sklearn.preprocessing import MinMaxScaler
+sc=MinMaxScaler()
+rf0=pd.DataFrame(sc.fit_transform(rf1),columns=['PassengerId', 'Survived', 'Pclass', 'Sex','Age','SibSp','Parch','Fare','Embarked'])
+rf0
+
+from sklearn.preprocessing import StandardScaler
+sc1=StandardScaler()
+rf3=pd.DataFrame(sc1.fit_transform(rf1),columns=['Passenger','Survived','Pclass','Sex','Age','SibSp','Parch','Fare','Embarked'])
+rf3
+
+from sklearn.preprocessing import MaxAbsScaler
+sc2=MaxAbsScaler()
+rf4=pd.DataFrame(sc2.fit_transform(rf1),columns=['Passenger','Survived','Pclass','Sex','Age','SibSp','Parch','Fare','Embarked'])
+rf4
+
+from sklearn.preprocessing import RobustScaler
+sc3=RobustScaler()
+rf5=pd.DataFrame(sc3.fit_transform(rf1),columns=['Passenger','Survived','Pclass','Sex','Age','SibSp','Parch','Fare','Embarked'])
+rf5
+```
 
 
 # OUPUT
